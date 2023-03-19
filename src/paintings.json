@@ -5,6 +5,7 @@
         "title": "Feathers, Art abstract",
         "price": 500,
         "author": {
+          "tag": "ractapopulous",
           "url": "htpps://pixabay.com/users/ractapopulous-24766/"
         },
         "quantity": 10
@@ -29,6 +30,6 @@
           "tag": "ractapopulous",
           "url": "htpps://pixabay.com/users/ractapopulous-24766/"
         },
-        "quantity": 50
+        "quantity": 5
       }
 ]

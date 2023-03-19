@@ -137,30 +137,21 @@
 // делаем папку component и в ней файл App.js, app.js, App.jsx или app.jsx разницьі нет никакой..... делаем там експорт дефолт функции и описьіваем функцию, затем импортируем сюда...
 
 
+// import ReactDOM from 'react-dom/client';
+// import App from 'components/App';
+
+// ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+// =======================================
+// нужно App обернуть в  <React.StrictMode> смотри.... https://ru.reactjs.org/docs/strict-mode.html
+
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from 'components/App';
+import './index.css';
 
-
-
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import { App } from 'components/App';
-// import './index.css';
-
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
