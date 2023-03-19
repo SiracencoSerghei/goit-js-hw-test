@@ -1,0 +1,19 @@
+[
+    {"name": "protection the outer rim", "location": "Corvus, Jangala",
+"speaker": "Jacob Mercer", "time": {"start": "2023-05-17T14:30:00", 
+"end": "2023-05-17T15:30:00"},
+"type": "free"
+}, {"name": "The art of spying", "location": "Corvus, Jangala",
+"speaker": "Jacob Mercer", "time": {"start": "2023-05-17T14:30:00", 
+"end": "2023-05-17T15:30:00"},
+"type": "payd"
+}, {"name": "Dealing with dictat", "location": "Corvus, Jangala",
+"speaker": "Jacob Mercer", "time": {"start": "2023-05-17T14:30:00", 
+"end": "2023-05-17T15:30:00"},
+"type": "free"
+},{"name": "Deep space horrors", "location": "Corvus, Jangala",
+"speaker": "Jacob Mercer", "time": {"start": "2023-05-17T14:30:00", 
+"end": "2023-05-17T15:30:00"},
+"type": "free"
+}
+]
