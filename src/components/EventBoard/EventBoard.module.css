@@ -1,8 +1,13 @@
 .eventBoard {
-    display: grid;
-    grid-template-columns: repeat(autofit, minmax(240px, auto));
+    display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     padding-left: 16px;
     padding-right: 16px;
 
+}
+.eventBoard > * {
+  flex-basis: 0;
+  flex-grow: 1;
+  width: 100%;
 }
