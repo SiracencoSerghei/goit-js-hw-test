@@ -1,3 +1,4 @@
+ @import '../../index.css';
 .event {
     position: relative;
     border: 2px dashed black;
@@ -39,9 +40,9 @@
     color: #fff;
 }
 .free {
-    border-color: var(--color-green);
+    background-color: var(--color-green);
 }
-.paid {
+.payd {
     background-color: var(--color-blue);
 }
 .vip {
