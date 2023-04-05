@@ -7,7 +7,8 @@ class MyComponent extends React.Component {
     }
 
     handleIncrementClick = () => {
-        this.setState({ count: this.state.count + 1 });
+        this.setState(increment => {
+          return { count: this.state.count + 1 });
     };
     handleDecrementClick = () => {
         this.setState({ count: this.state.count - 1 });
