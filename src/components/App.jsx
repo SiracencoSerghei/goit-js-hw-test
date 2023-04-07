@@ -1,23 +1,29 @@
 
-import upcomingEvent from "../upcoming-events.json";
-import { EventBoard } from "./EventBoard/EventBoard";
-import { PageTitle } from "./PageTitle/PageTitle";
-import {ButtonClick} from "./ButtonClick/ButtonClick"
-import { MyComponent } from "./MyComponent/MyComponent";
+import React from "react";
+import Counter from "./Counter";
+import Dropdown from "./Dropdown";
+import ColorPicker from "./ColorPicker";
+import './App.css';
 
-// export const App = () => {
-//   return (<div>
-//     <PageTitle text="24th Core Worlds Coalition Conference" />
-//     <EventBoard events={upcomingEvent} />
-//   </div>);
-// };
+const colorPickerOptions = [
+  { label: 'red', color: '#f44336'},
+  { label: 'green', color: '#4CAF50'},
+  { label: 'blue', color: '#2196F3'},
+  { label: 'grey', color: '#607D8B'},
+  { label: 'pink', color: '#E91E63'},
+  { label: 'indigo', color: '#3F51B5'},
+];
 
 export const App = () => {
-  return (<>
-    <MyComponent />
-    <PageTitle text="24th Core Worlds Coalition Conference" />
-    <EventBoard events={upcomingEvent} />
-    <ButtonClick />
-    <MyComponent />
-  </>);
+  return (<div className="app__container">
+ 
+   <h1 className="app__title">component state</h1>
+   <div className="app__content">
+     <Dropdown className="app__dropdown"/>
+      <Counter className="app-counter" initialValue={10}
+      />
+      <ColorPicker className="app-color-picker" options={colorPickerOptions} />
+   </div>
+  </div>);
+  
 };

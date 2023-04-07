@@ -1,0 +1,44 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  /* App container styles */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* App title styles */
+.app-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* App content styles */
+.app-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Dropdown styles */
+.app-dropdown {
+  width: 200px;
+}
+
+/* Counter styles */
+.app-counter {
+  width: 200px;
+}
+
+/* ColorPicker styles */
+.app-color-picker {
+  width: 100%;
+}
