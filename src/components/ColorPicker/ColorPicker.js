@@ -1,48 +1,63 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+
 import './ColorPicker.css';
 
 class ColorPicker extends Component {
+  state = {
+    activeOptionIdx: 0,
+  };
 
-    state = {
-        activeOptionIdx: 2,
-    };
-    
-    setActiveInd = (index) => {
-        this.setState({activeOptionIdx: index})
-    };
+  setActiveInd = index => {
+    this.setState({ activeOptionIdx: index });
+  };
 
-    makeOptionClassName = (index) => {
-        const optionClasses = ['ColorPicker__option'];
-        const{activeOptionIdx} = this.state;
+  // makeOptionClassName = (index) => {
+  //     const optionClasses = ['ColorPicker__option'];
+  //     const{activeOptionIdx} = this.state;
 
-                if(index === activeOptionIdx) {
-                    optionClasses.push('ColorPicker__option--active');
-                }
-                return optionClasses.join(' ');
-    };
+  //             if(index === activeOptionIdx) {
+  //                 optionClasses.push('ColorPicker__option--active');
+  //             }
+  //             return optionClasses.join(' ');
+  // };
 
-    render() { 
-        const{activeOptionIdx} = this.state;
-        const {options} = this.props;
-        const {label} = options[activeOptionIdx];
-        
-        return (
-        <div className="ColorPicker">
+//   makeOptionClassName = index => {
+//     const { activeOptionIdx } = this.state;
+//     return classNames('ColorPicker__option', {
+//       'ColorPicker__option--active': index === activeOptionIdx,
+//     });
+//   };
+
+  render() {
+    const { activeOptionIdx } = this.state;
+    const { options } = this.props;
+    const { label } = options[activeOptionIdx];
+
+    return (
+      <div className="ColorPicker">
         <h2 className="ColorPicker__title">ColorPicker</h2>
         <p>selected color: {label}</p>
         <div>
-            {options.map(({label, color}, index) => {
-              
-                return(
-<button key={label} className={this.makeOptionClassName(index)} style={{backgroundColor: color,}}  onClick={() => this.setActiveInd(index)}>
-                    {label}
-                </button>
-                );
-                })}
+          {options.map(({ label, color }, index) => {
+            return (
+              <button
+                key={label}
+                // className={this.makeOptionClassName(index)}
+                className={classNames('ColorPicker__option', {
+                          'ColorPicker__option--active': index === this.state.activeOptionIdx,
+                         })}
+                style={{ backgroundColor: color }}
+                onClick={() => this.setActiveInd(index)}
+              >
+                {label}
+              </button>
+            );
+          })}
         </div>
-    </div>
+      </div>
     );
-    }
+  }
 }
 
 // =============================================
@@ -51,7 +66,7 @@ class ColorPicker extends Component {
 //     state = {
 //         activeOptionIdx: 2,
 //     };
-    
+
 //     setActiveInd = (index) => {
 //         this.setState({activeOptionIdx: index})
 //     };
@@ -65,18 +80,18 @@ class ColorPicker extends Component {
 //                 return optionClasses.join(' ');
 //     };
 
-//     render() { 
+//     render() {
 //         // const activeOptionLabel = this.props.options[this.state.activeOptionIdx];
 //         // console.log(activeOptionLabel);
 //         const {label} = this.props.options[this.state.activeOptionIdx];
-        
+
 //         return (
 //         <div className="ColorPicker">
 //         <h2 className="ColorPicker__title">ColorPicker</h2>
 //         <p>selected color: {label}</p>
 //         <div>
 //             {this.props.options.map(({label, color}, index) => {
-              
+
 //                 return(
 // <button key={label} className={this.makeOptionClassName(index)} style={{backgroundColor: color,}}  onClick={() => this.setActiveInd(index)}>
 //                     {label}
@@ -105,13 +120,13 @@ class ColorPicker extends Component {
 //                 return optionClasses.join(' ');
 //     };
 
-//     render() { 
+//     render() {
 //         return (
 //         <div className="ColorPicker">
 //         <h2 className="ColorPicker__title">ColorPicker</h2>
 //         <div>
 //             {this.props.options.map(({label, color}, index) => {
-//               const optionClassName = this.makeOptionClassName(index);  
+//               const optionClassName = this.makeOptionClassName(index);
 
 //                 return(
 // <button key={label} className={optionClassName} style={{backgroundColor: color,
@@ -120,7 +135,7 @@ class ColorPicker extends Component {
 //                     {label}
 //                 </button>
 //                 );
-                
+
 //                 })}
 //         </div>
 //     </div>
@@ -135,8 +150,7 @@ class ColorPicker extends Component {
 //         activeOptionIdx: 3,
 //     }
 
-
-//     render() { 
+//     render() {
 //         return (
 //         <div className="ColorPicker">
 //         <h2 className="ColorPicker__title">ColorPicker</h2>
@@ -155,7 +169,7 @@ class ColorPicker extends Component {
 //                     {label}
 //                 </button>
 //                 );
-                
+
 //                 })}
 //         </div>
 //     </div>
@@ -175,7 +189,5 @@ class ColorPicker extends Component {
 //         </div>
 //     </div>
 // );
-
-
 
 export default ColorPicker;

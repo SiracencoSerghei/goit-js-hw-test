@@ -4,7 +4,8 @@
     align-items: center;
     width: 400px;
     padding: 10px;
-    border: 1px solid black;
+    border: 2px solid #00aeff;
+    border-radius: 4px;
   }
   
   .ColorPicker__title {
