@@ -2,8 +2,6 @@
 import React, { Component } from "react";
 import Container from "./Container";
 import FormTest from "./FormTest";
-import { nanoid } from "nanoid";  //  npm i nanoid
-//   model.id = nanoid() //=> "V1StGXR8_Z5jdHi6B-myT"
 import './App.css';
 
 
