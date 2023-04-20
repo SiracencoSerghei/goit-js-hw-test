@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import shortid from 'shortid'; //  npm install shortid
-import { nanoid } from "nanoid";  //  npm i nanoid
+import { nanoid } from 'nanoid'; //  npm i nanoid
 //   model.id = nanoid() //=> "V1StGXR8_Z5jdHi6B-myT"
 
 import './FormTest.css';
@@ -53,7 +53,6 @@ class FormTest extends Component {
       // не работает для чекбоксов
       { [name]: value }
     );
-    
   };
 
   onSubmit = event => {
@@ -107,7 +106,7 @@ class FormTest extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <br/>
+        <br />
         <p>Your level:</p>
         <label>
           <input
@@ -152,11 +151,11 @@ class FormTest extends Component {
           I agree with the conditions
         </label>
 
-        <button type="submit" disabled={!this.state.licence} value="send">Send
+        <button type="submit" disabled={!this.state.licence} value="send">
+          Send
         </button>
         {/* <button type="submit" value="send">Send</button> */}
       </form>
-      
     );
   }
 }
