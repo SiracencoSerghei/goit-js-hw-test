@@ -1,0 +1,13 @@
+.eventBoard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+.eventBoard > * {
+  flex-grow: 1;
+  min-width: 50px;
+  
+}
