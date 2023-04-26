@@ -1,0 +1,12 @@
+.videoList {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+.videoItem {
+    background-color: beige;
+    border: 2px solid rgb(6, 230, 36);
+    list-style: none;
+    width: 100%;
+}
