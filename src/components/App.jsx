@@ -1,6 +1,7 @@
 
 import React from "react";
-import AlertBtn from './AlertBtn/AlertBtn';
+import Button from "components/Button/Button";
+import {ToolBar, Toolbar} from './AlertBtn/AlertBtn';
 import '../index.css';
 
 export default function App() {
@@ -9,18 +10,20 @@ export default function App() {
     'Play Movie',
     'Upload Image',
 ];
-let message;
-  const onBtnClick = () => {
-    alert('message');
-  };
+const onHandleClick = () => {
+  alert('You clicked Me !!!');
+}
   
   return (
     <div  className='app' >
       <h1>Hello React!</h1>
-      <AlertBtn onClick={onBtnClick} message={messages[0]} />
-      <AlertBtn onClick={onBtnClick} message={messages[1]} />
-      <AlertBtn onClick={onBtnClick} message={messages[2]} />
-    </ div>
+      <Button onClick={onHandleClick} children={messages[0]}/>
+      <ToolBar />
+      <Toolbar
+      onPlayMovie={() => alert('Playing!')}
+      onUploadImage={() => alert('Uploading!')}
+    />
+      </ div>
   );
 }
 

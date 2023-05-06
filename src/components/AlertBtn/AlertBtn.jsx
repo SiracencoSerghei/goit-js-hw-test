@@ -1,9 +1,40 @@
 import React from "react";
 import Button from "components/Button/Button";
 
-function AlertButton({ message, onClick}) {
+function PlayButton({ movieName }) {
+    function handlePlayClick() {
+      alert(`Playing ${movieName}!`);
+    }
+  
     return (
-      <Button message={message} onClick={onClick} />
+      <Button onClick={handlePlayClick}>
+        Play "{movieName}"
+      </Button>
     );
   }
-  export default AlertButton;
+  function UploadButton() {
+    return (
+      <Button onClick={() => alert('Uploading!')} children={'Upload Image'}>
+      </Button>
+    );
+  }
+  export function ToolBar() {
+    return (
+      <div>
+        <PlayButton movieName="Kiki's Delivery Service" />
+        <UploadButton />
+      </div>
+    );
+  }
+  export function Toolbar({ onPlayMovie, onUploadImage }) {
+    return (
+      <div>
+        <Button onClick={onPlayMovie}>
+          Play Movie
+        </Button>
+        <Button onClick={onUploadImage}>
+          Upload Image
+        </Button>
+      </div>
+    );
+  }
