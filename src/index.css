@@ -30,3 +30,8 @@ code {
   align-items: center;
   justify-content: center;
 }
+.Toolbar {
+  margin: 15px;
+  display: flex;
+  gap: 10px;
+}
