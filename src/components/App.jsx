@@ -1,15 +1,27 @@
 
 import React from "react";
-import Recipes from './Recipes/Recipes';
-import PeopleList from './PeopleList/PeopleList';
+import AlertBtn from './AlertBtn/AlertBtn';
+import '../index.css';
 
 export default function App() {
+  const messages = [
+    'Click on Me!!!',
+    'Play Movie',
+    'Upload Image',
+];
+let message;
+  const onBtnClick = () => {
+    alert('message');
+  };
+  
   return (
-    <>
-      <h1>Hello React !</h1>
-      <Recipes/>
-      <PeopleList />
-    </>
-  )
+    <div  className='app' >
+      <h1>Hello React!</h1>
+      <AlertBtn onClick={onBtnClick} message={messages[0]} />
+      <AlertBtn onClick={onBtnClick} message={messages[1]} />
+      <AlertBtn onClick={onBtnClick} message={messages[2]} />
+    </ div>
+  );
 }
+
    
