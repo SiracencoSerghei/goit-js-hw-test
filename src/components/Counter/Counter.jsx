@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import{ MyContext} from '../../utils/MyContext';
+import React from 'react';
+import{ useMyContext} from '../../utils/MyContext';
 import Button from '../Button/Button';
 
 const Counter = () => {
-  const { state, dispatch } = useContext(MyContext);
+  const { state, dispatch } = useMyContext();
 
   const handleClickIncrement = () => {
     dispatch({ type: 'increment' });

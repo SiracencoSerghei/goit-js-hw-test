@@ -1,9 +1,12 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useContext, useReducer } from 'react';
 import MyReducer, { initialState } from './MyReducer';
 
 // Создание контекста
-export const MyContext = createContext();
+const MyContext = createContext();
 
+export const useMyContext = () => {
+  return useContext (MyContext)
+}
 // Компонент-провайдер контекста
 function MyContextProvider({ children }) {
   const [state, dispatch] = useReducer(MyReducer, initialState);
