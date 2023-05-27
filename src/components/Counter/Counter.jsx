@@ -1,34 +1,40 @@
+
 import React from 'react';
-import{ useMyContext} from '../../utils/MyContext';
 import Button from '../Button/Button';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement } from 'redux/actions';
+import {getCount} from '../../redux/selectors'
 
 const Counter = () => {
-  const { state, dispatch } = useMyContext();
+  // // State: a counter value
+  // const [counter, setCounter] = useState(0)
 
-  const handleClickIncrement = () => {
-    dispatch({ type: 'increment' });
-  };
+  // // Action: code that causes an update to the state when something happens
+  // const increment = () => {
+  //   setCounter(prevCounter => prevCounter + 1);
+  // }
 
-  const handleClickDecrement = () => {
-    dispatch({ type: 'decrement' });
-  };
+  // const decrement = () => {
+  //   setCounter(prevCounter => prevCounter - 1);
+  // }
 
+  const counter = useSelector(getCount)
+  const dispatch = useDispatch()
+
+  // View: the UI definition
   return (
-    <div className='position-absolute top-50 start-50 translate-middle'>
-      <div className='card bg-dark text-white' style={{ width: '600px' }}>
-        <div className='card-body'>
-          <h5 className='card-title text-center fs-1'>Counter</h5>
-          <p className='card-text text-center' style={{ fontSize: '80px' }}>
-            {state.count}
-          </p>
-          <div className='d-flex justify-content-center px-5'>
-            <Button className='btn btn-outline-success me-5'handleClick={handleClickIncrement}><i className='bi bi-plus-circle fs-1'></i></Button>
-			<Button className='btn btn-outline-danger ms-5' handleClick={handleClickDecrement}><i className='bi bi-dash-circle fs-1'></i></Button>
-          </div>
-        </div>
-      </div>
+    // <div>
+    //   Value: {counter} <Button onClick={increment}>Increment</Button>
+    //   <Button onClick={decrement}>Decrement</Button>
+    // </div>
+    <div>
+      Value: {counter} 
+      <Button onClick={() => dispatch(increment())}>Increment</Button>
+      <Button onClick={() => dispatch(decrement())}>Decrement</Button>
     </div>
   );
 };
 
 export default Counter;
+
+
